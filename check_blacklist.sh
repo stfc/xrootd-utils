@@ -1,7 +1,7 @@
 managers=`cat managers.txt`
 for i in $managers
 do
-ssh -i .ssh/id_rsa root@${i}.gridpp.rl.ac.uk "cat /etc/xrootd/cms.blacklist" > ${i}.man.blk
+ssh root@${i}.gridpp.rl.ac.uk "cat /etc/xrootd/cms.blacklist" > ${i}.man.blk
 done
 files=(*.man.blk)
 first="${files[0]}"

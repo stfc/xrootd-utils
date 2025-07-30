@@ -7,7 +7,7 @@ echo "$i.gridpp.rl.ac.uk"
 	do
 	ssh -i .ssh/id_rsa root@${j}.gridpp.rl.ac.uk "echo \"$i.gridpp.rl.ac.uk\" >> /etc/xrootd/cms.blacklist"
         done 
-	sleep 120
+	sleep 240
 	ssh -i .ssh/id_rsa root@${i}.gridpp.rl.ac.uk "reboot"
         for j in $managers                                                                     
 	do
